@@ -1,0 +1,82 @@
+// --------------- Javascript -----------------------
+// --------------------------------------------------
+
+//collapse menu on mobile version
+$(document).ready(function() {
+	$('.collapse').collapse({'toggle': false});
+
+	$('#mainContent').on('click', function() {
+		$('.collapse').collapse('hide');
+	})
+});
+
+function waiting() {
+	$.blockUI({
+				message : '<div class="waiting_image"/><span style="display: block;">Waiting...</span>',
+				css : {
+					border : 'none',
+					padding : '15px',
+					backgroundColor : 'transparent',
+					'-webkit-border-radius' : '10px',
+					'-moz-border-radius' : '10px',
+					opacity : .5,
+					color : '#fff'
+				}
+			});
+}
+
+function stopWaiting() {
+	$.unblockUI();
+}
+
+function bindHotKeyEnter(target, action) {
+	$(target).bind('keyup', function(e) {
+		if (e.which == 13) {
+			$(action).click();
+		}
+	});
+}
+
+function setFocusOn(target) {
+	$(target).focus();
+}
+
+// ------------- jQueryUI dialogs -------------------
+// --------------------------------------------------
+
+$(function() {
+	$('#error_message_popup').dialog({
+		modal : true,
+		autoOpen : false,
+		buttons : {
+			'Ok' : {
+				text : 'Ok',
+				'class' : 'mainContent_submitButton',
+				click : function() {
+					window.location.replace("/customercare/login.html");
+				}
+			}
+		}
+	});
+
+	$('.ui-dialog-titlebar-close').each(
+			function(i) {
+				$(this).css('background-color', 'white')
+						.css('color', '#75ce0f').css('font-weight', 'bold')
+						.css('font-size', '11px').removeClass(
+								'ui-state-default').html('X');
+			});
+	$('.ui-dialog').each(function(i) {
+		$(this).addClass("panel_popup");
+		$(this).addClass("dialog_responsive");
+	});
+	$('.ui-dialog-titlebar').each(
+			function(i) {
+				$(this).css('background-color', '#75CE0F')
+						.css('color', 'white').css('border', '0').css('height',
+								'26px');
+			});
+	$('#ui-id-2').each(function(i) {
+		$(this).addClass("cancelDialog-content-title");
+	});
+});

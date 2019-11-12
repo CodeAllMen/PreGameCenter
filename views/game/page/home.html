@@ -1,0 +1,56 @@
+<div class="row" id="page">
+
+    {{range .GameList}}
+
+        <div class="">
+            <div class="row game-box">
+                <div class="col-xs-6"><h4>{{.GameName}}</h4></div>
+                <div class="col-xs-12 margin-bottom"><a href="/play/{{.GameID}}"><img
+                                class="game-img" alt="{{.GameName}}"
+                                src="http://static.gogamehub.com/game/{{.GameID}}/img/game.png"></a>
+                </div>
+                <div class="col-xs-12"><a href="/play/{{.GameID}}"
+                                          class="button stretch">Wählen</a>
+                </div>
+            </div>
+        </div>
+
+    {{end}}
+
+</div>
+
+
+<!-- footer -->
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <div class="pagination">
+            <ul>
+                <li><a id="prePage" type="button" rel="next" class="disabled"><span
+                                class="glyphicon glyphicon-triangle-left"></span></a></li>
+                <li>
+                    <select class="page_select" id="page_select" onchange="openOtherPage()">
+                        {{range .pageNumList}}
+                            <option>{{.}}</option>
+                        {{end}}
+                    </select>
+                </li>
+                <li><a id="nextPage" type="button" rel="next"><span
+                                class="glyphicon glyphicon-triangle-right"></span></a></li>
+
+                <script>
+                    var select = document.getElementById("page_select");
+                    for (var i = 0; i < select.options.length; i++) {
+                        if (select.options[i].innerHTML == {{.currentPage}}) {
+                            select.options[i].selected = true;
+                            break;
+                        }
+                    }
+                </script>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

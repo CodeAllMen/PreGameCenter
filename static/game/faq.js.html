@@ -1,0 +1,13 @@
+//------------------------------------------ Javastript --------------------------------------------------
+function displayFaqAnswer(faqId) {
+	var faqAnswer = $('#faq_answer_' + faqId);
+	var faqQuestion = $('#faq_' + faqId);
+
+	if ($(faqAnswer).is(":visible")) {
+		$(faqQuestion).css("font-weight", "");
+		$(faqAnswer).hide();
+	} else {
+		$(faqQuestion).css("font-weight", "bold");
+		$(faqAnswer).show();
+	}
+}

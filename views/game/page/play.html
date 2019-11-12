@@ -1,0 +1,26 @@
+<div class="row top">
+    <div id="detailContent">
+        <div class="col-xs-6 text-left category"><h4 id="gamename">{{.game.GameName}}</h4></div>
+        {{/*<div class="col-xs-6 text-right category"><h4>Preis: <b>1</b> Credit</h4></div>*/}}
+        <div class=""><img class="game-img" alt="Fox Jungle Adventure"
+                           src="http://static.gogamehub.com/game/{{.game.GameID}}/img/top.png"></div>
+    </div>
+    <div class="col-xs-12 thumbs">
+        <div class="row" id="detail">
+            <div class="col-xs-4"><img class="game-img" alt="Fox Jungle Adventure-1"
+                                       src="http://static.gogamehub.com/game/{{.game.GameID}}/img/1.png"></div>
+            <div class="col-xs-4"><img class="game-img" alt="Fox Jungle Adventure-2"
+                                       src="http://static.gogamehub.com/game/{{.game.GameID}}/img/2.png"></div>
+            <div class="col-xs-4"><img class="game-img" alt="Fox Jungle Adventure-3"
+                                       src="http://static.gogamehub.com/game/{{.game.GameID}}/img/3.png"></div>
+        </div>
+    </div>
+
+    <div class="stretch">
+        <!-- <a href="/login.html"> -->
+        <a class="button stretch" id="play_now" href="/play/game/{{.game.GameID}}">Spielen
+            <span class="glyphicon glyphicon-play-circle"></span>
+        </a>
+        <!-- </a> -->
+    </div>
+</div>

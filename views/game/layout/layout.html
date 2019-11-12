@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://www.ugamecenter.com/index.html -->
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="description" content="移动web，js，css">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Game Center</title>
+    <link rel="icon" href="http://www.ugamecenter.com/img/favicon.jpg">
+    <link href="/static/game/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/game/bootstrap-theme.css" rel="stylesheet">
+    <link href="/static/game/style.css" rel="stylesheet">
+    <script async="" src="/static/game/analytics.js"></script>
+    <script src="/static/game/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="container content">
+    <script>
+        if (window.self !== window.top)
+            window.top.location = window.self.location;
+    </script>
+    <!-- header -->
+    <div class="row">
+        <div class="col-xs-12 header-logo">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a id="index_up">
+                        <img style="width:50%" src="/static/game/logo.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="/static/game/person.png" class="person">
+
+    <!-- body -->
+    {{.LayoutContent}}
+
+
+
+</div>
+
+
+
+<div class="container">
+    <div class="row footer">
+        <div class="col-xs-12 text-center">
+            <p class="txt"><a id="index_down" HREF="/">HOME</a> | <a href="/AGB.html">AGB</a> | <a
+                        href="/FAQ.html">FAQ</a> | <a
+                        href="/KONTAKT.html">KONTAKT</a> | <a
+                        href="/IMPRESSUM.html">IMPRESSUM</a> | <br><a
+                        href="http://www.mobile-info.cc/customercare/">ABO VERWALTUNG</a> | <a
+                        href="/KUNDIGUNG.html">KÜNDIGUNG</a> | <br><a
+                        href="/DATENSCHUTZERKLARUNG.html">DATENSCHUTZERKLÄRUNG</a> | <a
+                        href="/Rucktrittsrechts.html">HINWEIS AUF RÜCKTRITTSRECHT</a></p>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="height: 90%;">
+        <div class="modal-content" style="height: 100%;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+            </div>
+            <div class="modal-body" style="height: 80%;">
+                <iframe src="/static/game/saved_resource.html"></iframe>
+            </div>
+        </div><!--  /.modal-content  -->
+    </div>
+</div>
+
+
+<script src="/static/game/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="/static/game/index.js" type="text/javascript"></script>
+
+<script>
+    function openOtherPage() {
+        pageNum = $("#page_select").val();
+        window.location.href = "/?p=" + pageNum
+    }
+</script>
+
+
+</body>
+</html>
