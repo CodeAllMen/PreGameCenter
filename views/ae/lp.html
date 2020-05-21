@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=360"/>
+    <title>Game Center</title>
+    <link rel="icon" href=" " type="image/x-icon"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/game.css">
+    <style>
+        .myh {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 25px;
+            background-color: #8da728;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .btp {
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.2 !important;
+            box-sizing: inherit;
+            font-size: 12px !important;
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .input_msisdn {
+            width: 200px;
+            height: 40px;
+            outline: none;
+            font-size: 16px;
+            padding-left: 8px;
+            border: 1px solid #dbdbd9;
+        }
+    </style>
+</head>
+
+<body class="container">
+<h2 class="myh">Game Center</h2>
+<div class="header">
+    <img src="/static/img/bg.png"/>
+</div>
+<div class="footer">
+    <div class="sub">
+        <p style="font-size:12px">
+            Poplatek je 99,00 Kč / týden. službu lze zrušit zasláním e-mailu na adresu info-cz@mobileinfo.biz nebo voláním na 844 444 484 zdarma.
+            Po přihlášení získáte 71 her.
+        </p>
+        {{/*            <button class="buttonOne" id="submit_btn_mobile"*/}}
+        {{/*                    onclick="location.href='http://pl.leadernet-hk.com/start-sub?track={{.track}}&service_name={{.service_name}}'">Kontynuuj*/}}
+        {{/*            </button>*/}}
+        <p style="font-size:17px;color: #0a4965">
+
+            Chcete-li platit pomocí účtu za mobilní telefon, zadejte své telefonní číslo kliknutím na tlačítko
+        </p>
+        <br>
+        <button class="buttonOne" id="submit_btn_mobile">DALŠÍ</button>
+        <br/>
+        Službu předplatného služby CZ198 na číslo 90440 můžete také odeslat přímo prostřednictvím textové zprávy mobilního telefonu.
+        <br/>
+        Pro zruseni posli SMS ve tvaru STOP CZ198 na cislo 90440
+        <br/>
+        <br>
+        <p style="font-weight: Bold;font-size: 12px">
+            <a href="/tnc" style="color: #0611dc">Podmínky</a> -
+            <a href="/help" style="color: #0611dc">Kontakt a zrušit odběr</a> -
+            <a href="/privacy" style="color: #0611dc">Prohlášení o ochraně soukromí</a>
+            {{/*<a href="/dm/pl/disclaimer" style="color: #0611dc">Wyłączenia odpowiedzialności</a>*/}}
+        </p>
+        <p class="btp">
+            Game Center je doplňková služba poskytovaná prémiovou sazbou a je předplacenou službou, která
+            umožňuje hry html5 (dále jen „služba“).
+
+            Služba je k dispozici na mobilních telefonech nebo jiných koncových zařízeních se SIM kartou v síti
+            Vodafone、O2、T-Mobile.
+        </p>
+    </div>
+    <div style="text-align: center;font-size: 10px;">
+        Foxseek Media Limited<br>
+        Evidenční číslo: 1922945<br>
+        Registrační soud: Hongkong<br>
+        Registrační adresa: Unit B, 10/F Lee May Buliding 788-790 Nathan Road Mongkok Kowloon Hong Kong<br><br>
+    </div>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $("#submit_btn_mobile").click(function () {
+        let msisdn = $(".input_msisdn").val();
+        window.location.href = '/tan';
+    })
+</script>
+
+</html>
+<!-- designed by yy(github.com/guaidashu) -->

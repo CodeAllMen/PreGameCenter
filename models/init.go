@@ -2,6 +2,6 @@ package models
 
 import "github.com/astaxie/beego/orm"
 
-func init(){
-	orm.RegisterModel(new(Game))
+func init() {
+	orm.RegisterModel(new(Game), new(CategoryModel))
 }

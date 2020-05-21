@@ -3,6 +3,8 @@ package routers
 import (
 	"github.com/MobileCPX/PreBaseLib/loginutil"
 	"github.com/MobileCPX/PreGameCenter/controllers"
+	"github.com/MobileCPX/PreGameCenter/controllers/ae"
+	"github.com/MobileCPX/PreGameCenter/controllers/slovenia"
 	"github.com/astaxie/beego"
 )
 
@@ -35,4 +37,18 @@ func init() {
 	beego.Router("/unsub/result", &controllers.UnsubResultControllers{})
 
 	beego.Router("/dm/at/welcome", &controllers.DimocoATController{}, "Get:WelcomePage")
+
+	beego.Router("/lpage", &ae.SubPage{}, "*:Lp")
+	beego.Router("/tan", &ae.SubPage{}, "*:Tan")
+	beego.Router("/confirm", &ae.SubPage{}, "*:Confirm")
+	beego.Router("/tnc", &ae.SubPage{}, "*:Condition")
+	beego.Router("/help", &ae.SubPage{}, "*:Help")
+	beego.Router("/privacy", &ae.SubPage{}, "*:Privacy")
+
+	beego.Router("/sv/lp", &slovenia.SubPage{}, "*:Lp")
+	beego.Router("/sv/tan", &slovenia.SubPage{}, "*:Tan")
+	beego.Router("/sv/confirm", &slovenia.SubPage{}, "*:Confirm")
+	beego.Router("/sv/tnc", &slovenia.SubPage{}, "*:Condition")
+	beego.Router("/sv/help", &slovenia.SubPage{}, "*:Help")
+	beego.Router("/sv/privacy", &slovenia.SubPage{}, "*:Privacy")
 }

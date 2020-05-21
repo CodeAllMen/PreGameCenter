@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=360">
+    <link type="text/css" rel="stylesheet" href="/static/css/game.css">
+    <title>confirm</title>
+    <style>
+        /*.container {*/
+        /*    width: 100%;*/
+        /*    padding: 15px 15px;*/
+        /*}*/
+
+        .remind_container {
+            width: 280px;
+            height: 40px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 40px;
+            background-color: #6fc072;
+            color: #fff;
+            border: 3px solid #69a012;
+        }
+
+        .continue_btn {
+            width: 300px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: #fff;
+            margin: 0 auto;
+            background-color: #69a012;
+        }
+    </style>
+</head>
+<body class="container">
+<div class="footer">
+    <div>
+        Pomoc: 0148 450 9616. Služba účtována na váš mobil.
+        <br/>
+        Nákup podléhá smluvním podmínkám Lead Career SL.
+    </div>
+
+    <div style="width: 100%; height: 30px;"></div>
+
+    <div class="remind_container">
+        Předplatné aktivováno
+    </div>
+
+    <h4>Vaše předplatné za 4,5 týdně bylo nastaveno a bude pokračovat, dokud nezískáte text STOP na 62442.</h4>
+    <div>Tato částka bude účtována na váš další telefonní účet nebo bude odečtena z vašeho předplaceného zůstatku</div>
+    {{/*2.4 3.5*/}}
+    <div style="width: 100%; height: 30px;"></div>
+    <div class="continue_btn">Pokračovat</div>
+</div>
+</body>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(".continue_btn").click(function () {
+        window.location.href = '/';
+    })
+</script>
+
+</html>
+<!-- designed by yy(github.com/guaidashu) -->

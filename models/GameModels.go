@@ -3,8 +3,9 @@ package models
 import "github.com/astaxie/beego/orm"
 
 type Game struct {
-	GameID   string `orm:"pk;column(game_id)"`
-	GameName string `orm:"game_name"`
+	GameID     string `orm:"pk;column(game_id)"`
+	GameName   string `orm:"game_name"`
+	CategoryId int    `orm:"category_id" json:"category_id"`
 }
 
 //  获取游戏列表，传页数及每页限制数量
@@ -25,6 +26,6 @@ func (game *Game) getTotalPage(limitNum int) int {
 // 根据游戏ID查询游戏
 func (game *Game) GetGameByID(gameID string) error {
 	o := orm.NewOrm()
-	return o.QueryTable("game").Filter("game_id",gameID).One(game)
+	return o.QueryTable("game").Filter("game_id", gameID).One(game)
 
 }

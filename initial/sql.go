@@ -2,9 +2,8 @@ package initial
 
 import (
 	"fmt"
-
+	_ "github.com/MobileCPX/PreBaseLib/loginutil"
 	_ "github.com/MobileCPX/PreGameCenter/models"
-
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/lib/pq"

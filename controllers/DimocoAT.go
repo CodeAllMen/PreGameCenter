@@ -21,13 +21,13 @@ func (c *DimocoATController) LPPage() {
 		track.Refer = c.Ctx.Request.Referer()
 		track.ClickTime, _ = util.GetNowTime()
 		track.AffName = "Test"
-		trackID = track.RequestInsertTrack("http://dat.leadernet-hk.com/aff/click")
+		trackID = track.RequestInsertTrack("http://pd.argameloft.com/aff/click")
 
-		c.Redirect("http://dat.leadernet-hk.com/identify?track="+trackID, 302)
+		c.Redirect("http://pd.argameloft.com/identify?track="+trackID, 302)
 		c.StopRun()
 	}
 
-	c.Data["URL"] = "http://dat.leadernet-hk.com/start-sub?track=" + trackID
+	c.Data["URL"] = "http://pd.argameloft.com/start-sub?track=" + trackID
 
 	subID := c.Ctx.GetCookie("user")
 	if subID != "" {

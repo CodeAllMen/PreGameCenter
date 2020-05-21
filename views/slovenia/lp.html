@@ -1,0 +1,112 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=360"/>
+    <title>Game Center</title>
+    <link rel="icon" href=" " type="image/x-icon"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/game.css">
+    <style>
+        .myh {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 25px;
+            background-color: #8da728;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .btp {
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.2 !important;
+            box-sizing: inherit;
+            font-size: 12px !important;
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .input_msisdn {
+            width: 200px;
+            height: 40px;
+            outline: none;
+            font-size: 16px;
+            padding-left: 8px;
+            border: 1px solid #dbdbd9;
+        }
+    </style>
+
+</head>
+
+<body class="container" style="">
+<h2 class="myh"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Game Center</font></font></h2>
+<div class="header">
+    <img src="/static/img/bg.png">
+</div>
+<div class="footer">
+    <div class="sub">
+        <p style="font-size:12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    Pristojbina znaša €2,49 x 2 / teden
+                    Uporabnik se lahko kadar koli odjavi , tako da na kratko številko 3499 pošlje ključno besedo STOP INTER.
+                </font></font></p>
+
+
+        <p style="font-size:17px;color: #0a4965"><font style="vertical-align: inherit;"><font
+                        style="vertical-align: inherit;">
+
+                    Za plačilo z računom za mobilni telefon tukaj vnesite svojo telefonsko številko:
+                </font></font></p>
+        <input class="input_msisdn" placeholder="">
+        <br>
+        <br>
+        <button class="buttonOne" id="submit_btn_mobile"><font style="vertical-align: inherit;"><font
+                        style="vertical-align: inherit;">NASLEDNJI</font></font></button>
+        <br>
+        <p style="font-weight: Bold;font-size: 12px">
+            <a href="/sv/tnc" style="color: #0611dc"><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;">Pogoji </font></font></a><font
+                    style="vertical-align: inherit;"></font><a href="/sv/tnc" style="color: #0611dc"><font
+                        style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;">in </font></font></a><font
+                    style="vertical-align: inherit;"><a href="/sv/tnc" style="color: #0611dc"><font
+                            style="vertical-align: inherit;">določila</font></a><font style="vertical-align: inherit;">
+                    -
+                </font><a href="/sv/help" style="color: #0611dc"><font
+                            style="vertical-align: inherit;">Kontakt in odjava</font></a><font
+                        style="vertical-align: inherit;"> -
+                </font></font><a href="/sv/privacy" style="color: #0611dc"><font
+                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">izjava o
+                        zasebnosti</font></font></a>
+
+        </p>
+        <p class="btp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    Game Center je dodatna storitev s premijsko ceno in je naročniška storitev, ki omogoča html5 igre
+                    ("storitev"). </font><font style="vertical-align: inherit;">Storitev je na voljo na mobilnih
+                    telefonih ali drugih terminalskih napravah s kartico SIM v omrežju T-Mobile.
+                    Ponudnik storitve je odgovoren za reševanje reklamacij in prevzema odgovornost za pravilno izvedbo storitve
+                </font></font></p>
+        <p>
+            DIMOCO je ponudnik tehnoloških platform
+        </p>
+    </div>
+    <div style="text-align: center;font-size: 10px;"><font style="vertical-align: inherit;"><font
+                    style="vertical-align: inherit;">
+                Foxseek Media Limited </font></font><br><font style="vertical-align: inherit;"><font
+                    style="vertical-align: inherit;">
+                Registracijska številka: 1922945 </font></font><br><font style="vertical-align: inherit;"><font
+                    style="vertical-align: inherit;">
+                Registracijsko sodišče: Hong Kong </font></font><br><font style="vertical-align: inherit;"><font
+                    style="vertical-align: inherit;">
+                Naslov registracije: Enota B, 10 / F Lee May Buliding 788-790 Nathan Road Hong Kong Kowloon Hong
+                Kong</font></font><br><br>
+    </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $("#submit_btn_mobile").click(function () {
+        let msisdn = $(".input_msisdn").val();
+        window.location.href = '/tan';
+    })
+</script>
+
+</body>
+</html>
